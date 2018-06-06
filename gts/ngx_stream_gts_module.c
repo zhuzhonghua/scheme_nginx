@@ -72,6 +72,7 @@ ngx_stream_gts_create_srv_conf(ngx_conf_t *cf)
 		return NULL;
 	}
 
+	ngx_log_stderr(0, "create srv conf");
 	//conf->ed = ""
 	return conf;
 }
@@ -96,5 +97,5 @@ ngx_stream_gts_init_session(ngx_stream_session_t *s)
 
 	conf = (ngx_stream_gts_srv_conf_t*)ngx_stream_get_module_srv_conf(s, ngx_stream_gts_module);
 
-	printf("hello world");	
+	ngx_log_stderr(0, "hello world");	
 }
