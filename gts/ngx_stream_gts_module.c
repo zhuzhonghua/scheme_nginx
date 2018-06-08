@@ -33,8 +33,7 @@ ngx_stream_gts_on(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 	cscf->handler = ngx_stream_gts_init_session;
 
 	printf("load gts conf\n");
-
-	printf(cmd->args->elts[1]);
+	ngx_conf_set_str_slot(cf, cmd, conf);
 	
 	return NGX_CONF_OK;
 }
@@ -78,17 +77,19 @@ ngx_stream_gts_create_srv_conf(ngx_conf_t *cf)
 
 	//ngx_log_stderr(0, "create srv conf");
 	printf("gts create conf\n");
-	//conf->ed = ""
+	conf->cfg.len = 0;
+	conf->cfg.data = NULL;
 	return conf;
 }
 
 static char *
 ngx_stream_gts_merge_srv_conf(ngx_conf_t *cf, void *parent, void *child)
 {
-	//ngx_stream_gts_srv_conf_t *prev = (ngx_stream_gts_srv_conf_t*)parent;
-	//ngx_stream_gts_srv_conf_t *conf = (ngx_stream_gts_srv_conf_t*)child;
+	ngx_stream_gts_srv_conf_t *prev = (ngx_stream_gts_srv_conf_t*)parent;
+	ngx_stream_gts_srv_conf_t *conf = (ngx_stream_gts_srv_conf_t*)child;
 
-	printf("gts merge srv conf");
+	printf("gts merge srv conf\n");
+	ngx_conf_merge_str_value(conf->cfg, prev->cfg, "");
 	return NGX_CONF_OK;
 }
 
