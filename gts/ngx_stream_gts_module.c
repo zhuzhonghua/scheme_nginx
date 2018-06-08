@@ -34,6 +34,9 @@ ngx_stream_gts_on(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 
 	printf("load gts conf\n");
 	ngx_conf_set_str_slot(cf, cmd, conf);
+
+	ngx_stream_gts_srv_conf_t* gtsConf = (ngx_stream_gts_srv_conf_t*)conf;
+	printf("gtsconf %s \n", gtsConf->cfg.data);
 	
 	return NGX_CONF_OK;
 }
@@ -90,6 +93,8 @@ ngx_stream_gts_merge_srv_conf(ngx_conf_t *cf, void *parent, void *child)
 
 	printf("gts merge srv conf\n");
 	ngx_conf_merge_str_value(conf->cfg, prev->cfg, "");
+
+	printf("after merge %s \n", conf->cfg.data);
 	return NGX_CONF_OK;
 }
 
