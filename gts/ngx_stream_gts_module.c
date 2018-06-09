@@ -12,6 +12,7 @@ static void *ngx_stream_gts_create_srv_conf(ngx_conf_t *cf);
 static char *ngx_stream_gts_merge_srv_conf(ngx_conf_t *cf, void *parent, void *child);
 static char *ngx_stream_gts_on(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);
 static void ngx_stream_gts_init_session(ngx_stream_session_t *s);
+static void ngx_stream_gts_read_handler(ngx_event_t *rev);
 
 static ngx_command_t  ngx_stream_gts_commands[] = {	
 	{
@@ -112,4 +113,17 @@ ngx_stream_gts_init_session(ngx_stream_session_t *s)
 	//ngx_log_stderr(0, "hello world");
 	printf("hello world\n");
 	printf("init sessioin\n");
+
+	c->read->handler = ngx_stream_gts_read_handler;
+
+	if (ngx_handle_read_event(c->read, 0) != NGX_OK)
+	{
+		printf("handle read event error\n");
+		ngx_close_connection(c);
+	}
+}
+
+static void ngx_stream_gts_read_handler(ngx_event_t *rev)
+{
+	printf("read handler\n");
 }
