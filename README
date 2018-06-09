@@ -1,3 +1,20 @@
 
 Documentation is available at http://nginx.org
 
+ref
+
+Nginx模块开发入门  
+https://www.jianshu.com/p/42752bd7ccdd
+
+annotated_nginx  
+https://github.com/chronolaw/annotated_nginx  
+
+可使用vs直接编译的nginx  
+https://github.com/topcpporg/nginx_vs
+
+Nginx Development guide  
+http://nginx.org/en/docs/dev/development_guide.html#adding_new_modules
+
+nginx-based high-performance tcp server  
+https://github.com/jie123108/nginx-tcp-server  
+
