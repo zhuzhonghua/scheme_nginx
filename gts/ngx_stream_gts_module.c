@@ -125,5 +125,7 @@ ngx_stream_gts_init_session(ngx_stream_session_t *s)
 
 static void ngx_stream_gts_read_handler(ngx_event_t *rev)
 {
-	printf("read handler\n");
+	ngx_connection_t* c = rev->data;
+	int size = c->buffer->end - c->buffer->last;
+	printf("read handler %d\n", size);
 }

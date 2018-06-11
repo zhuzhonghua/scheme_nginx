@@ -63,6 +63,7 @@
 		2CD1AD0420CB75A2000B77AA /* ngx_stream_access_module.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1ACEE20CB75A2000B77AA /* ngx_stream_access_module.c */; };
 		2CD1AD0520CB75A2000B77AA /* ngx_stream_split_clients_module.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1ACEF20CB75A2000B77AA /* ngx_stream_split_clients_module.c */; };
 		2CD1AD0720CB771B000B77AA /* ngx_stream.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1AD0620CB771B000B77AA /* ngx_stream.c */; };
+		2CD522BD20CEECF300F17C63 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD522BC20CEECF300F17C63 /* libz.tbd */; };
 		2CE0785B20B9599700EB172B /* ngx_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0785A20B9599700EB172B /* ngx_alloc.c */; };
 		2CE0787320B95A4300EB172B /* ngx_writev_chain.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0785C20B95A4200EB172B /* ngx_writev_chain.c */; };
 		2CE0787420B95A4300EB172B /* ngx_errno.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0785D20B95A4200EB172B /* ngx_errno.c */; };
@@ -216,6 +217,7 @@
 		2CD1ACEE20CB75A2000B77AA /* ngx_stream_access_module.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ngx_stream_access_module.c; path = stream/ngx_stream_access_module.c; sourceTree = "<group>"; };
 		2CD1ACEF20CB75A2000B77AA /* ngx_stream_split_clients_module.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ngx_stream_split_clients_module.c; path = stream/ngx_stream_split_clients_module.c; sourceTree = "<group>"; };
 		2CD1AD0620CB771B000B77AA /* ngx_stream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ngx_stream.c; path = stream/ngx_stream.c; sourceTree = "<group>"; };
+		2CD522BC20CEECF300F17C63 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2CE0785A20B9599700EB172B /* ngx_alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ngx_alloc.c; sourceTree = "<group>"; };
 		2CE0785C20B95A4200EB172B /* ngx_writev_chain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ngx_writev_chain.c; sourceTree = "<group>"; };
 		2CE0785D20B95A4200EB172B /* ngx_errno.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ngx_errno.c; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD522BD20CEECF300F17C63 /* libz.tbd in Frameworks */,
 				2CE078FA20B9947D00EB172B /* libpcre.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +574,7 @@
 		2CE078F820B9947D00EB172B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CD522BC20CEECF300F17C63 /* libz.tbd */,
 				2CE078F920B9947D00EB172B /* libpcre.a */,
 			);
 			name = Frameworks;
@@ -910,6 +914,7 @@
 					"\"$(SRCROOT)/../src/mail\"",
 				);
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -933,6 +938,7 @@
 					"\"$(SRCROOT)/../src/mail\"",
 				);
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
