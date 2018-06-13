@@ -126,6 +126,15 @@ ngx_stream_gts_init_session(ngx_stream_session_t *s)
 static void ngx_stream_gts_read_handler(ngx_event_t *rev)
 {
 	ngx_connection_t* c = rev->data;
+	ngx_stream_core_srv_conf_t  *cscf;
+	ngx_stream_session_t *s = c->data;
+	cscf = ngx_stream_get_module_srv_conf(s, ngx_stream_core_module);
+	if (c->buffer == NULL) {
+		c->buffer = ngx_create_temp_buf(c->pool, cscf->preread_buffer_size);
+	}
+	
 	int size = c->buffer->end - c->buffer->last;
-	printf("read handler %d\n", size);
+	int n = c->recv(c, c->buffer->last, size);
+	
+	printf("read handler %d recv %d\n", size, n);
 }
