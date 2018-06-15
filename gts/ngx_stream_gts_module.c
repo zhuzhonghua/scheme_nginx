@@ -118,16 +118,16 @@ ngx_stream_gts_init_session(ngx_stream_session_t *s)
 	c->write->handler = ngx_stream_gts_write_handler;
 	c->read->handler = ngx_stream_gts_read_handler;
 
-	if (ngx_handle_read_event(c->read, 0) != NGX_OK)
-	{
-		printf("handle read event error\n");
-		ngx_close_connection(c);
-	}
-
-	if (ngx_handle_write_event(c->write, 0) != NGX_OK) {
-		printf("handle write event error\n");
-		ngx_close_connection(c);
-	}
+	//if (ngx_handle_read_event(c->read, 0) != NGX_OK)
+	//{
+	//	printf("handle read event error\n");
+	//	ngx_close_connection(c);
+	//}
+	//
+	//if (ngx_handle_write_event(c->write, 0) != NGX_OK) {
+	//	printf("handle write event error\n");
+	//	ngx_close_connection(c);
+	//}
 }
 
 static void ngx_stream_gts_read_handler(ngx_event_t *rev)

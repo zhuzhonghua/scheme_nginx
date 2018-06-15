@@ -163,6 +163,7 @@
 
 /* Begin PBXFileReference section */
 		2C2051F620D3E157007D34CB /* ngx_stream_gts_module.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ngx_stream_gts_module.c; path = ../../gts/ngx_stream_gts_module.c; sourceTree = "<group>"; };
+		2C2051F820D4072B007D34CB /* ngx_stream_echo_module.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = ngx_stream_echo_module.c; path = ../../gts/ngx_stream_echo_module.c; sourceTree = "<group>"; };
 		2C364F1620B8A38000311715 /* nx */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nx; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3651E420B8AA3100311715 /* ngx_rbtree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ngx_rbtree.c; sourceTree = "<group>"; };
 		2C3651E520B8AA3100311715 /* ngx_hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ngx_hash.c; sourceTree = "<group>"; };
@@ -391,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				2C2051F620D3E157007D34CB /* ngx_stream_gts_module.c */,
+				2C2051F820D4072B007D34CB /* ngx_stream_echo_module.c */,
 			);
 			name = gts;
 			sourceTree = "<group>";

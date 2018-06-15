@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1645"
             endingLineNumber = "1645"
-            landmarkName = "ngx_stream_echo_echo()"
-            landmarkType = "7">
+            landmarkName = "ngx_stream_echo_echo"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -31,8 +31,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "352"
             endingLineNumber = "352"
-            landmarkName = "ngx_stream_echo_handler()"
-            landmarkType = "7">
+            landmarkName = "ngx_stream_echo_handler"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -47,8 +47,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1238"
             endingLineNumber = "1238"
-            landmarkName = "ngx_stream_echo_writer()"
-            landmarkType = "7">
+            landmarkName = "ngx_stream_echo_writer"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -63,8 +63,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1353"
             endingLineNumber = "1353"
-            landmarkName = "ngx_stream_echo_block_reading()"
-            landmarkType = "7">
+            landmarkName = "ngx_stream_echo_block_reading"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
