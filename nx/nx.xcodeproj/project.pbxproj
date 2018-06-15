@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2051F720D3E157007D34CB /* ngx_stream_gts_module.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C2051F620D3E157007D34CB /* ngx_stream_gts_module.c */; };
 		2C36520920B8AA3500311715 /* ngx_rbtree.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C3651E420B8AA3100311715 /* ngx_rbtree.c */; };
 		2C36520A20B8AA3500311715 /* ngx_hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C3651E520B8AA3100311715 /* ngx_hash.c */; };
 		2C36520B20B8AA3500311715 /* ngx_resolver.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C3651E620B8AA3100311715 /* ngx_resolver.c */; };
@@ -63,75 +64,6 @@
 		2CD1AD0520CB75A2000B77AA /* ngx_stream_split_clients_module.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1ACEF20CB75A2000B77AA /* ngx_stream_split_clients_module.c */; };
 		2CD1AD0720CB771B000B77AA /* ngx_stream.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1AD0620CB771B000B77AA /* ngx_stream.c */; };
 		2CD522BD20CEECF300F17C63 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD522BC20CEECF300F17C63 /* libz.tbd */; };
-		2CD522DF20D1A39600F17C63 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522C220D1A39600F17C63 /* lapi.c */; };
-		2CD522E020D1A39600F17C63 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522C320D1A39600F17C63 /* lauxlib.c */; };
-		2CD522E120D1A39600F17C63 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522C420D1A39600F17C63 /* lbaselib.c */; };
-		2CD522E220D1A39600F17C63 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522C520D1A39600F17C63 /* lcode.c */; };
-		2CD522E320D1A39600F17C63 /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522C620D1A39600F17C63 /* ldblib.c */; };
-		2CD522E420D1A39600F17C63 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522C720D1A39600F17C63 /* ldebug.c */; };
-		2CD522E520D1A39600F17C63 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522C820D1A39600F17C63 /* ldo.c */; };
-		2CD522E620D1A39600F17C63 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522C920D1A39600F17C63 /* ldump.c */; };
-		2CD522E720D1A39600F17C63 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522CA20D1A39600F17C63 /* lfunc.c */; };
-		2CD522E820D1A39600F17C63 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522CB20D1A39600F17C63 /* lgc.c */; };
-		2CD522E920D1A39600F17C63 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522CC20D1A39600F17C63 /* linit.c */; };
-		2CD522EA20D1A39600F17C63 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522CD20D1A39600F17C63 /* liolib.c */; };
-		2CD522EB20D1A39600F17C63 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522CE20D1A39600F17C63 /* llex.c */; };
-		2CD522EC20D1A39600F17C63 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522CF20D1A39600F17C63 /* lmathlib.c */; };
-		2CD522ED20D1A39600F17C63 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522D020D1A39600F17C63 /* lmem.c */; };
-		2CD522EE20D1A39600F17C63 /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522D120D1A39600F17C63 /* loadlib.c */; };
-		2CD522EF20D1A39600F17C63 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522D220D1A39600F17C63 /* lobject.c */; };
-		2CD522F020D1A39600F17C63 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522D320D1A39600F17C63 /* lopcodes.c */; };
-		2CD522F120D1A39600F17C63 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522D420D1A39600F17C63 /* loslib.c */; };
-		2CD522F220D1A39600F17C63 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522D520D1A39600F17C63 /* lparser.c */; };
-		2CD522F320D1A39600F17C63 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522D620D1A39600F17C63 /* lstate.c */; };
-		2CD522F420D1A39600F17C63 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522D720D1A39600F17C63 /* lstring.c */; };
-		2CD522F520D1A39600F17C63 /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522D820D1A39600F17C63 /* lstrlib.c */; };
-		2CD522F620D1A39600F17C63 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522D920D1A39600F17C63 /* ltable.c */; };
-		2CD522F720D1A39600F17C63 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522DA20D1A39600F17C63 /* ltablib.c */; };
-		2CD522F820D1A39600F17C63 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522DB20D1A39600F17C63 /* ltm.c */; };
-		2CD522F920D1A39600F17C63 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522DC20D1A39600F17C63 /* lundump.c */; };
-		2CD522FA20D1A39600F17C63 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522DD20D1A39600F17C63 /* lvm.c */; };
-		2CD522FB20D1A39600F17C63 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522DE20D1A39600F17C63 /* lzio.c */; };
-		2CD5232520D1A3C800F17C63 /* ngx_stream_lua_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522FD20D1A3C800F17C63 /* ngx_stream_lua_api.c */; };
-		2CD5232620D1A3C800F17C63 /* ngx_stream_lua_args.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522FE20D1A3C800F17C63 /* ngx_stream_lua_args.c */; };
-		2CD5232720D1A3C800F17C63 /* ngx_stream_lua_balancer.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD522FF20D1A3C800F17C63 /* ngx_stream_lua_balancer.c */; };
-		2CD5232820D1A3C800F17C63 /* ngx_stream_lua_cache.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230020D1A3C800F17C63 /* ngx_stream_lua_cache.c */; };
-		2CD5232920D1A3C800F17C63 /* ngx_stream_lua_clfactory.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230120D1A3C800F17C63 /* ngx_stream_lua_clfactory.c */; };
-		2CD5232A20D1A3C800F17C63 /* ngx_stream_lua_config.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230220D1A3C800F17C63 /* ngx_stream_lua_config.c */; };
-		2CD5232B20D1A3C800F17C63 /* ngx_stream_lua_consts.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230320D1A3C800F17C63 /* ngx_stream_lua_consts.c */; };
-		2CD5232C20D1A3C800F17C63 /* ngx_stream_lua_contentby.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230420D1A3C800F17C63 /* ngx_stream_lua_contentby.c */; };
-		2CD5232D20D1A3C800F17C63 /* ngx_stream_lua_control.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230520D1A3C800F17C63 /* ngx_stream_lua_control.c */; };
-		2CD5232E20D1A3C800F17C63 /* ngx_stream_lua_coroutine.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230620D1A3C800F17C63 /* ngx_stream_lua_coroutine.c */; };
-		2CD5232F20D1A3C800F17C63 /* ngx_stream_lua_ctx.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230720D1A3C800F17C63 /* ngx_stream_lua_ctx.c */; };
-		2CD5233020D1A3C800F17C63 /* ngx_stream_lua_directive.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230820D1A3C800F17C63 /* ngx_stream_lua_directive.c */; };
-		2CD5233120D1A3C800F17C63 /* ngx_stream_lua_exception.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230920D1A3C800F17C63 /* ngx_stream_lua_exception.c */; };
-		2CD5233220D1A3C800F17C63 /* ngx_stream_lua_initby.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230A20D1A3C800F17C63 /* ngx_stream_lua_initby.c */; };
-		2CD5233320D1A3C800F17C63 /* ngx_stream_lua_initworkerby.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230B20D1A3C800F17C63 /* ngx_stream_lua_initworkerby.c */; };
-		2CD5233420D1A3C800F17C63 /* ngx_stream_lua_lex.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230C20D1A3C800F17C63 /* ngx_stream_lua_lex.c */; };
-		2CD5233520D1A3C800F17C63 /* ngx_stream_lua_log.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230D20D1A3C800F17C63 /* ngx_stream_lua_log.c */; };
-		2CD5233620D1A3C800F17C63 /* ngx_stream_lua_logby.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230E20D1A3C800F17C63 /* ngx_stream_lua_logby.c */; };
-		2CD5233720D1A3C800F17C63 /* ngx_stream_lua_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5230F20D1A3C800F17C63 /* ngx_stream_lua_misc.c */; };
-		2CD5233820D1A3C800F17C63 /* ngx_stream_lua_module.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231020D1A3C800F17C63 /* ngx_stream_lua_module.c */; };
-		2CD5233920D1A3C800F17C63 /* ngx_stream_lua_output.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231120D1A3C800F17C63 /* ngx_stream_lua_output.c */; };
-		2CD5233A20D1A3C800F17C63 /* ngx_stream_lua_pcrefix.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231220D1A3C800F17C63 /* ngx_stream_lua_pcrefix.c */; };
-		2CD5233B20D1A3C800F17C63 /* ngx_stream_lua_phase.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231320D1A3C800F17C63 /* ngx_stream_lua_phase.c */; };
-		2CD5233C20D1A3C800F17C63 /* ngx_stream_lua_prereadby.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231420D1A3C800F17C63 /* ngx_stream_lua_prereadby.c */; };
-		2CD5233D20D1A3C800F17C63 /* ngx_stream_lua_regex.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231520D1A3C800F17C63 /* ngx_stream_lua_regex.c */; };
-		2CD5233E20D1A3C800F17C63 /* ngx_stream_lua_request.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231620D1A3C800F17C63 /* ngx_stream_lua_request.c */; };
-		2CD5233F20D1A3C800F17C63 /* ngx_stream_lua_script.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231720D1A3C800F17C63 /* ngx_stream_lua_script.c */; };
-		2CD5234020D1A3C800F17C63 /* ngx_stream_lua_semaphore.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231820D1A3C800F17C63 /* ngx_stream_lua_semaphore.c */; };
-		2CD5234120D1A3C800F17C63 /* ngx_stream_lua_shdict.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231920D1A3C800F17C63 /* ngx_stream_lua_shdict.c */; };
-		2CD5234220D1A3C800F17C63 /* ngx_stream_lua_sleep.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231A20D1A3C800F17C63 /* ngx_stream_lua_sleep.c */; };
-		2CD5234320D1A3C800F17C63 /* ngx_stream_lua_socket_tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231B20D1A3C800F17C63 /* ngx_stream_lua_socket_tcp.c */; };
-		2CD5234420D1A3C800F17C63 /* ngx_stream_lua_socket_udp.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231C20D1A3C800F17C63 /* ngx_stream_lua_socket_udp.c */; };
-		2CD5234520D1A3C800F17C63 /* ngx_stream_lua_ssl.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231D20D1A3C800F17C63 /* ngx_stream_lua_ssl.c */; };
-		2CD5234620D1A3C800F17C63 /* ngx_stream_lua_string.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231E20D1A3C800F17C63 /* ngx_stream_lua_string.c */; };
-		2CD5234720D1A3C800F17C63 /* ngx_stream_lua_time.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5231F20D1A3C800F17C63 /* ngx_stream_lua_time.c */; };
-		2CD5234820D1A3C800F17C63 /* ngx_stream_lua_timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5232020D1A3C800F17C63 /* ngx_stream_lua_timer.c */; };
-		2CD5234920D1A3C800F17C63 /* ngx_stream_lua_uthread.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5232120D1A3C800F17C63 /* ngx_stream_lua_uthread.c */; };
-		2CD5234A20D1A3C800F17C63 /* ngx_stream_lua_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5232220D1A3C800F17C63 /* ngx_stream_lua_util.c */; };
-		2CD5234B20D1A3C800F17C63 /* ngx_stream_lua_variable.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5232320D1A3C800F17C63 /* ngx_stream_lua_variable.c */; };
-		2CD5234C20D1A3C800F17C63 /* ngx_stream_lua_worker.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5232420D1A3C800F17C63 /* ngx_stream_lua_worker.c */; };
 		2CD5234E20D2EC1600F17C63 /* ngx_http_try_files_module.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5234D20D2EC1600F17C63 /* ngx_http_try_files_module.c */; };
 		2CD5235020D2EC2700F17C63 /* ngx_http_mirror_module.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5234F20D2EC2700F17C63 /* ngx_http_mirror_module.c */; };
 		2CE0785B20B9599700EB172B /* ngx_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0785A20B9599700EB172B /* ngx_alloc.c */; };
@@ -230,6 +162,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C2051F620D3E157007D34CB /* ngx_stream_gts_module.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ngx_stream_gts_module.c; path = ../../gts/ngx_stream_gts_module.c; sourceTree = "<group>"; };
 		2C364F1620B8A38000311715 /* nx */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nx; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3651E420B8AA3100311715 /* ngx_rbtree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ngx_rbtree.c; sourceTree = "<group>"; };
 		2C3651E520B8AA3100311715 /* ngx_hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ngx_hash.c; sourceTree = "<group>"; };
@@ -454,6 +387,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2051F520D3E139007D34CB /* gts */ = {
+			isa = PBXGroup;
+			children = (
+				2C2051F620D3E157007D34CB /* ngx_stream_gts_module.c */,
+			);
+			name = gts;
+			sourceTree = "<group>";
+		};
 		2C364F0D20B8A38000311715 = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +415,7 @@
 		2C364F1820B8A38000311715 /* nx */ = {
 			isa = PBXGroup;
 			children = (
+				2C2051F520D3E139007D34CB /* gts */,
 				2CD522FC20D1A3A000F17C63 /* stream-lua */,
 				2CD522C120D1A25D00F17C63 /* lua */,
 				2CE078FB20B9951800EB172B /* objs */,
@@ -863,15 +805,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CD522E720D1A39600F17C63 /* lfunc.c in Sources */,
-				2CD5232920D1A3C800F17C63 /* ngx_stream_lua_clfactory.c in Sources */,
 				2CE0787D20B95A4300EB172B /* ngx_process_cycle.c in Sources */,
 				2C36522D20B8AA3500311715 /* ngx_palloc.c in Sources */,
-				2CD5232B20D1A3C800F17C63 /* ngx_stream_lua_consts.c in Sources */,
-				2CD5234420D1A3C800F17C63 /* ngx_stream_lua_socket_udp.c in Sources */,
 				2CE0787F20B95A4300EB172B /* ngx_user.c in Sources */,
 				2C36522920B8AA3500311715 /* ngx_radix_tree.c in Sources */,
-				2CD522FB20D1A39600F17C63 /* lzio.c in Sources */,
 				2CE078DE20B98F3300EB172B /* ngx_http_headers_filter_module.c in Sources */,
 				2CE0785B20B9599700EB172B /* ngx_alloc.c in Sources */,
 				2CD1AD0220CB75A2000B77AA /* ngx_stream_variables.c in Sources */,
@@ -879,63 +816,41 @@
 				2CE078DD20B98F3300EB172B /* ngx_http_uwsgi_module.c in Sources */,
 				2CE078E020B98F3300EB172B /* ngx_http_charset_filter_module.c in Sources */,
 				2CE078B020B97A7400EB172B /* ngx_http_write_filter_module.c in Sources */,
-				2CD522EC20D1A39600F17C63 /* lmathlib.c in Sources */,
 				2CE0789020B95B3700EB172B /* ngx_http_parse.c in Sources */,
-				2CD522F320D1A39600F17C63 /* lstate.c in Sources */,
 				2CE0789E20B979CD00EB172B /* ngx_event.c in Sources */,
-				2CD522DF20D1A39600F17C63 /* lapi.c in Sources */,
 				2CE078DB20B98F3300EB172B /* ngx_http_limit_conn_module.c in Sources */,
-				2CD5233120D1A3C800F17C63 /* ngx_stream_lua_exception.c in Sources */,
 				2CE0789120B95B3700EB172B /* ngx_http_core_module.c in Sources */,
 				2CE078AF20B97A7400EB172B /* ngx_http_request_body.c in Sources */,
 				2CE078B720B97A7400EB172B /* ngx_http_postpone_filter_module.c in Sources */,
 				2CD5235020D2EC2700F17C63 /* ngx_http_mirror_module.c in Sources */,
 				2CE0788420B95A4300EB172B /* ngx_udp_sendmsg_chain.c in Sources */,
-				2CD5233520D1A3C800F17C63 /* ngx_stream_lua_log.c in Sources */,
 				2CE078EF20B98F3300EB172B /* ngx_http_userid_filter_module.c in Sources */,
-				2CD522EE20D1A39600F17C63 /* loadlib.c in Sources */,
-				2CD522F620D1A39600F17C63 /* ltable.c in Sources */,
 				2C36521D20B8AA3500311715 /* ngx_buf.c in Sources */,
 				2CE0787420B95A4300EB172B /* ngx_errno.c in Sources */,
-				2CD5233E20D1A3C800F17C63 /* ngx_stream_lua_request.c in Sources */,
-				2CD522F520D1A39600F17C63 /* lstrlib.c in Sources */,
 				2CE078DA20B98F3300EB172B /* ngx_http_fastcgi_module.c in Sources */,
-				2CD522EA20D1A39600F17C63 /* liolib.c in Sources */,
 				2CE078F720B98F3300EB172B /* ngx_http_referer_module.c in Sources */,
-				2CD522F020D1A39600F17C63 /* lopcodes.c in Sources */,
 				2C36520D20B8AA3500311715 /* ngx_cpuinfo.c in Sources */,
 				2CE078EB20B98F3300EB172B /* ngx_http_rewrite_module.c in Sources */,
 				2CE078E520B98F3300EB172B /* ngx_http_browser_module.c in Sources */,
-				2CD522F120D1A39600F17C63 /* loslib.c in Sources */,
-				2CD5232D20D1A3C800F17C63 /* ngx_stream_lua_control.c in Sources */,
 				2CE078E220B98F3300EB172B /* ngx_http_geo_module.c in Sources */,
-				2CD5232720D1A3C800F17C63 /* ngx_stream_lua_balancer.c in Sources */,
 				2C36520920B8AA3500311715 /* ngx_rbtree.c in Sources */,
 				2CD1AD0720CB771B000B77AA /* ngx_stream.c in Sources */,
-				2CD522EB20D1A39600F17C63 /* llex.c in Sources */,
 				2C36521B20B8AA3500311715 /* ngx_parse.c in Sources */,
 				2CE078A020B979CD00EB172B /* ngx_event_timer.c in Sources */,
 				2CE078D820B98F3300EB172B /* ngx_http_gzip_filter_module.c in Sources */,
 				2C36522620B8AA3500311715 /* ngx_open_file_cache.c in Sources */,
-				2CD522E320D1A39600F17C63 /* ldblib.c in Sources */,
 				2CE0788220B95A4300EB172B /* ngx_udp_recv.c in Sources */,
 				2CE0788520B95A4300EB172B /* ngx_daemon.c in Sources */,
 				2CE078F220B98F3300EB172B /* ngx_http_log_module.c in Sources */,
-				2CD5233420D1A3C800F17C63 /* ngx_stream_lua_lex.c in Sources */,
-				2CD5234A20D1A3C800F17C63 /* ngx_stream_lua_util.c in Sources */,
-				2CD5233320D1A3C800F17C63 /* ngx_stream_lua_initworkerby.c in Sources */,
 				2CE078F620B98F3300EB172B /* ngx_http_ssi_filter_module.c in Sources */,
 				2CE0788720B95A4300EB172B /* ngx_send.c in Sources */,
 				2CE0788820B95A4300EB172B /* ngx_recv.c in Sources */,
 				2CE0788020B95A4300EB172B /* ngx_time.c in Sources */,
-				2CD5233B20D1A3C800F17C63 /* ngx_stream_lua_phase.c in Sources */,
-				2CD5234320D1A3C800F17C63 /* ngx_stream_lua_socket_tcp.c in Sources */,
-				2CD522F720D1A39600F17C63 /* ltablib.c in Sources */,
 				2CE078F420B98F3300EB172B /* ngx_http_empty_gif_module.c in Sources */,
 				2CE078B120B97A7400EB172B /* ngx_http_file_cache.c in Sources */,
 				2CE078ED20B98F3300EB172B /* ngx_http_static_module.c in Sources */,
+				2C2051F720D3E157007D34CB /* ngx_stream_gts_module.c in Sources */,
 				2CE0788F20B95B3700EB172B /* ngx_http.c in Sources */,
-				2CD5233620D1A3C800F17C63 /* ngx_stream_lua_logby.c in Sources */,
 				2CE0788920B95A4300EB172B /* ngx_readv_chain.c in Sources */,
 				2CE0787620B95A4300EB172B /* ngx_posix_init.c in Sources */,
 				2CE0787820B95A4300EB172B /* ngx_dlopen.c in Sources */,
@@ -943,26 +858,17 @@
 				2C36522120B8AA3500311715 /* ngx_connection.c in Sources */,
 				2C36522520B8AA3500311715 /* ngx_syslog.c in Sources */,
 				2CE078F520B98F3300EB172B /* ngx_http_range_filter_module.c in Sources */,
-				2CD5232520D1A3C800F17C63 /* ngx_stream_lua_api.c in Sources */,
-				2CD522E520D1A39600F17C63 /* ldo.c in Sources */,
 				2CE078B520B97A7400EB172B /* ngx_http_variables.c in Sources */,
 				2C36522820B8AA3500311715 /* ngx_output_chain.c in Sources */,
-				2CD5234B20D1A3C800F17C63 /* ngx_stream_lua_variable.c in Sources */,
-				2CD522E820D1A39600F17C63 /* lgc.c in Sources */,
 				2CE078AE20B97A7400EB172B /* ngx_http_upstream_round_robin.c in Sources */,
 				2C36521520B8AA3500311715 /* ngx_array.c in Sources */,
 				2CD1ACF820CB75A2000B77AA /* ngx_stream_script.c in Sources */,
 				2CD1ACF220CB75A2000B77AA /* ngx_stream_core_module.c in Sources */,
-				2CD5232820D1A3C800F17C63 /* ngx_stream_lua_cache.c in Sources */,
-				2CD5232E20D1A3C800F17C63 /* ngx_stream_lua_coroutine.c in Sources */,
 				2CE078E820B98F3300EB172B /* ngx_http_upstream_zone_module.c in Sources */,
 				2CD1ACFB20CB75A2000B77AA /* ngx_stream_handler.c in Sources */,
-				2CD522E420D1A39600F17C63 /* ldebug.c in Sources */,
 				2CE0788320B95A4300EB172B /* ngx_socket.c in Sources */,
 				2CE0787B20B95A4300EB172B /* ngx_darwin_sendfile_chain.c in Sources */,
-				2CD5233920D1A3C800F17C63 /* ngx_stream_lua_output.c in Sources */,
 				2C36520E20B8AA3500311715 /* ngx_inet.c in Sources */,
-				2CD5233220D1A3C800F17C63 /* ngx_stream_lua_initby.c in Sources */,
 				2C36521E20B8AA3500311715 /* nginx.c in Sources */,
 				2CD1ACFE20CB75A2000B77AA /* ngx_stream_return_module.c in Sources */,
 				2C36521320B8AA3500311715 /* ngx_spinlock.c in Sources */,
@@ -971,10 +877,7 @@
 				2CE0787E20B95A4300EB172B /* ngx_setaffinity.c in Sources */,
 				2CE078B320B97A7400EB172B /* ngx_http_copy_filter_module.c in Sources */,
 				2CE0789320B95B3700EB172B /* ngx_http_request.c in Sources */,
-				2CD5232F20D1A3C800F17C63 /* ngx_stream_lua_ctx.c in Sources */,
-				2CD5234520D1A3C800F17C63 /* ngx_stream_lua_ssl.c in Sources */,
 				2CE0789220B95B3700EB172B /* ngx_http_special_response.c in Sources */,
-				2CD5233F20D1A3C800F17C63 /* ngx_stream_lua_script.c in Sources */,
 				2CE0787C20B95A4300EB172B /* ngx_process.c in Sources */,
 				2C36522420B8AA3500311715 /* ngx_conf_file.c in Sources */,
 				2CD5234E20D2EC1600F17C63 /* ngx_http_try_files_module.c in Sources */,
@@ -983,44 +886,28 @@
 				2CD1ACF620CB75A2000B77AA /* ngx_stream_map_module.c in Sources */,
 				2CE078FF20B9959400EB172B /* ngx_http_upstream_least_conn_module.c in Sources */,
 				2CD1AD0020CB75A2000B77AA /* ngx_stream_upstream.c in Sources */,
-				2CD5233D20D1A3C800F17C63 /* ngx_stream_lua_regex.c in Sources */,
 				2CE078B620B97A7400EB172B /* ngx_http_header_filter_module.c in Sources */,
 				2CE078B220B97A7400EB172B /* ngx_http_script.c in Sources */,
 				2CE078D920B98F3300EB172B /* ngx_http_access_module.c in Sources */,
 				2CE078F020B98F3300EB172B /* ngx_http_index_module.c in Sources */,
 				2C36521F20B8AA3500311715 /* ngx_cycle.c in Sources */,
 				2C36520F20B8AA3500311715 /* ngx_regex.c in Sources */,
-				2CD5233C20D1A3C800F17C63 /* ngx_stream_lua_prereadby.c in Sources */,
 				2CE0789D20B979CD00EB172B /* ngx_event_connect.c in Sources */,
 				2CE078FD20B9952700EB172B /* ngx_modules.c in Sources */,
 				2C36520A20B8AA3500311715 /* ngx_hash.c in Sources */,
-				2CD5233820D1A3C800F17C63 /* ngx_stream_lua_module.c in Sources */,
-				2CD522F220D1A39600F17C63 /* lparser.c in Sources */,
 				2C36522720B8AA3500311715 /* ngx_shmtx.c in Sources */,
 				2CD1ACF320CB75A2000B77AA /* ngx_stream_upstream_zone_module.c in Sources */,
 				2CE078E420B98F3300EB172B /* ngx_http_map_module.c in Sources */,
 				2CE078E320B98F3300EB172B /* ngx_http_split_clients_module.c in Sources */,
-				2CD522EF20D1A39600F17C63 /* lobject.c in Sources */,
-				2CD522ED20D1A39600F17C63 /* lmem.c in Sources */,
 				2CE0787A20B95A4300EB172B /* ngx_channel.c in Sources */,
-				2CD5232C20D1A3C800F17C63 /* ngx_stream_lua_contentby.c in Sources */,
 				2CD1AD0120CB75A2000B77AA /* ngx_stream_upstream_hash_module.c in Sources */,
 				2C36521920B8AA3500311715 /* ngx_string.c in Sources */,
-				2CD5234120D1A3C800F17C63 /* ngx_stream_lua_shdict.c in Sources */,
-				2CD522E920D1A39600F17C63 /* linit.c in Sources */,
-				2CD522E620D1A39600F17C63 /* ldump.c in Sources */,
 				2CE078F120B98F3300EB172B /* ngx_http_not_modified_filter_module.c in Sources */,
 				2C36521620B8AA3500311715 /* ngx_times.c in Sources */,
 				2CD1ACF020CB75A2000B77AA /* ngx_stream_upstream_least_conn_module.c in Sources */,
-				2CD522E020D1A39600F17C63 /* lauxlib.c in Sources */,
 				2CD1AD0420CB75A2000B77AA /* ngx_stream_access_module.c in Sources */,
-				2CD5234220D1A3C800F17C63 /* ngx_stream_lua_sleep.c in Sources */,
-				2CD5233020D1A3C800F17C63 /* ngx_stream_lua_directive.c in Sources */,
 				2CE0787520B95A4300EB172B /* ngx_setproctitle.c in Sources */,
-				2CD5232A20D1A3C800F17C63 /* ngx_stream_lua_config.c in Sources */,
-				2CD522F920D1A39600F17C63 /* lundump.c in Sources */,
 				2C36522C20B8AA3500311715 /* ngx_list.c in Sources */,
-				2CD522FA20D1A39600F17C63 /* lvm.c in Sources */,
 				2CE078DC20B98F3300EB172B /* ngx_http_autoindex_module.c in Sources */,
 				2CE0789F20B979CD00EB172B /* ngx_event_pipe.c in Sources */,
 				2C36520B20B8AA3500311715 /* ngx_resolver.c in Sources */,
@@ -1028,44 +915,31 @@
 				2C36521120B8AA3500311715 /* ngx_module.c in Sources */,
 				2CE078EA20B98F3300EB172B /* ngx_http_chunked_filter_module.c in Sources */,
 				2CD1AD0520CB75A2000B77AA /* ngx_stream_split_clients_module.c in Sources */,
-				2CD5232620D1A3C800F17C63 /* ngx_stream_lua_args.c in Sources */,
-				2CD5233A20D1A3C800F17C63 /* ngx_stream_lua_pcrefix.c in Sources */,
 				2C36521A20B8AA3500311715 /* ngx_murmurhash.c in Sources */,
 				2CD1ACFA20CB75A2000B77AA /* ngx_stream_log_module.c in Sources */,
 				2C36521820B8AA3500311715 /* ngx_md5.c in Sources */,
 				2CE078EE20B98F3300EB172B /* ngx_http_upstream_keepalive_module.c in Sources */,
 				2CE078A120B979CD00EB172B /* ngx_event_accept.c in Sources */,
 				2C36521720B8AA3500311715 /* ngx_file.c in Sources */,
-				2CD5234720D1A3C800F17C63 /* ngx_stream_lua_time.c in Sources */,
-				2CD5234920D1A3C800F17C63 /* ngx_stream_lua_uthread.c in Sources */,
 				2C36520C20B8AA3500311715 /* ngx_log.c in Sources */,
 				2CD1ACF520CB75A2000B77AA /* ngx_stream_limit_conn_module.c in Sources */,
 				2CE0787920B95A4300EB172B /* ngx_shmem.c in Sources */,
-				2CD5234020D1A3C800F17C63 /* ngx_stream_lua_semaphore.c in Sources */,
 				2CE078F320B98F3300EB172B /* ngx_http_proxy_module.c in Sources */,
 				2CE078E620B98F3300EB172B /* ngx_http_memcached_module.c in Sources */,
-				2CD522F420D1A39600F17C63 /* lstring.c in Sources */,
 				2CD1ACFC20CB75A2000B77AA /* ngx_stream_geo_module.c in Sources */,
 				2CE078EC20B98F3300EB172B /* ngx_http_scgi_module.c in Sources */,
 				2C36522B20B8AA3500311715 /* ngx_queue.c in Sources */,
-				2CD5233720D1A3C800F17C63 /* ngx_stream_lua_misc.c in Sources */,
 				2CD1ACF720CB75A2000B77AA /* ngx_stream_upstream_round_robin.c in Sources */,
 				2CE0789C20B979CD00EB172B /* ngx_event_posted.c in Sources */,
 				2C36522220B8AA3500311715 /* ngx_parse_time.c in Sources */,
-				2CD5234820D1A3C800F17C63 /* ngx_stream_lua_timer.c in Sources */,
-				2CD5234620D1A3C800F17C63 /* ngx_stream_lua_string.c in Sources */,
 				2C36522A20B8AA3500311715 /* ngx_crypt.c in Sources */,
 				2CE078E120B98F3300EB172B /* ngx_http_limit_req_module.c in Sources */,
 				2C36521020B8AA3500311715 /* ngx_sha1.c in Sources */,
 				2CE0788620B95A4300EB172B /* ngx_files.c in Sources */,
 				2CE078E720B98F3300EB172B /* ngx_http_upstream_ip_hash_module.c in Sources */,
-				2CD5234C20D1A3C800F17C63 /* ngx_stream_lua_worker.c in Sources */,
-				2CD522E120D1A39600F17C63 /* lbaselib.c in Sources */,
 				2CE0787320B95A4300EB172B /* ngx_writev_chain.c in Sources */,
 				2CE078E920B98F3300EB172B /* ngx_http_auth_basic_module.c in Sources */,
-				2CD522F820D1A39600F17C63 /* ltm.c in Sources */,
 				2CD1ACF120CB75A2000B77AA /* ngx_stream_write_filter_module.c in Sources */,
-				2CD522E220D1A39600F17C63 /* lcode.c in Sources */,
 				2C36521C20B8AA3500311715 /* ngx_slab.c in Sources */,
 				2C36522320B8AA3500311715 /* ngx_proxy_protocol.c in Sources */,
 				2C36522020B8AA3500311715 /* ngx_crc32.c in Sources */,

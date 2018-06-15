@@ -13,6 +13,7 @@ static char *ngx_stream_gts_merge_srv_conf(ngx_conf_t *cf, void *parent, void *c
 static char *ngx_stream_gts_on(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);
 static void ngx_stream_gts_init_session(ngx_stream_session_t *s);
 static void ngx_stream_gts_read_handler(ngx_event_t *rev);
+static void ngx_stream_gts_write_handler(ngx_event_t *rev);
 
 static ngx_command_t  ngx_stream_gts_commands[] = {	
 	{
@@ -114,11 +115,17 @@ ngx_stream_gts_init_session(ngx_stream_session_t *s)
 	printf("hello world\n");
 	printf("init sessioin\n");
 
+	c->write->handler = ngx_stream_gts_write_handler;
 	c->read->handler = ngx_stream_gts_read_handler;
 
 	if (ngx_handle_read_event(c->read, 0) != NGX_OK)
 	{
 		printf("handle read event error\n");
+		ngx_close_connection(c);
+	}
+
+	if (ngx_handle_write_event(c->write, 0) != NGX_OK) {
+		printf("handle write event error\n");
 		ngx_close_connection(c);
 	}
 }
@@ -137,4 +144,11 @@ static void ngx_stream_gts_read_handler(ngx_event_t *rev)
 	int n = c->recv(c, c->buffer->last, size);
 	
 	printf("read handler %d recv %d\n", size, n);
+}
+
+
+static void
+ngx_stream_gts_write_handler(ngx_event_t *wev)
+{
+	printf("gts write handler\n");
 }
