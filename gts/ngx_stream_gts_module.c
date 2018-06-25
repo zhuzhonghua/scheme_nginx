@@ -152,3 +152,34 @@ ngx_stream_gts_write_handler(ngx_event_t *wev)
 {
 	printf("gts write handler\n");
 }
+
+static ngx_int_t
+ngx_stream_gts_write_buffer(ngx_stream_session_t *s, ngx_str_t str)
+{
+    ngx_int_t            rc;
+    ngx_chain_t         *out;
+    ngx_connection_t    *c;
+    
+    c = s->connection;
+    
+    out = ngx_chain_get_free_buf(c->pool, NULL);
+    if (out == NULL) {
+        return NGX_ERROR;
+    }
+    
+    out->buf->memory = 1;
+    
+    out->buf->pos = str.data;
+    out->buf->last = out->buf->pos + str.len;
+    
+    out->buf->tag = (ngx_buf_tag_t) &ngx_stream_gts_module;
+    
+    //rc = ngx_chain_writer(&ctx->writer, out);
+    
+    
+    //ngx_chain_update_chains(c->pool, &ctx->free, &ctx->busy, &out,
+    //                        (ngx_buf_tag_t) &ngx_stream_echo_module);
+    
+    return rc;
+
+}
