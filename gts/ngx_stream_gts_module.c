@@ -111,7 +111,8 @@ ngx_stream_gts_init_session(ngx_stream_session_t *s)
 {
 	ngx_connection_t                *c;
 	ngx_stream_gts_srv_conf_t     *conf;
-
+    ngx_stream_gts_ctx_t          *ctx;
+    
 	c = s->connection;
 
 	conf = (ngx_stream_gts_srv_conf_t*)ngx_stream_get_module_srv_conf(s, ngx_stream_gts_module);
@@ -123,11 +124,14 @@ ngx_stream_gts_init_session(ngx_stream_session_t *s)
 	c->write->handler = ngx_stream_gts_write_handler;
 	c->read->handler = ngx_stream_gts_read_handler;
 
-	//if (ngx_handle_read_event(c->read, 0) != NGX_OK)
-	//{
-	//	printf("handle read event error\n");
-	//	ngx_close_connection(c);
-	//}
+    ctx = ngx_stream_gts_create_ctx(s);
+    ngx_stream_set_ctx(s, ctx, ngx_stream_gts_module);
+    
+	if (ngx_handle_read_event(c->read, 0) != NGX_OK)
+	{
+		printf("handle read event error\n");
+		ngx_close_connection(c);
+	}
 	//
 	//if (ngx_handle_write_event(c->write, 0) != NGX_OK) {
 	//	printf("handle write event error\n");
@@ -137,6 +141,8 @@ ngx_stream_gts_init_session(ngx_stream_session_t *s)
 
 static void ngx_stream_gts_read_handler(ngx_event_t *rev)
 {
+    ngx_int_t rc;
+    
 	ngx_connection_t* c = rev->data;
 	ngx_stream_core_srv_conf_t  *cscf;
 	ngx_stream_session_t *s = c->data;
@@ -149,6 +155,11 @@ static void ngx_stream_gts_read_handler(ngx_event_t *rev)
 	int n = c->recv(c, c->buffer->last, size);
 	
 	printf("read handler %d recv %d\n", size, n);
+    
+    //do the echo service
+    // ngx_copy the buffer
+    //rc = ngx_stream_gts_write_buffer(s, );
+    printf("write buffer %d\n", rc);
 }
 
 
@@ -164,8 +175,11 @@ ngx_stream_gts_write_buffer(ngx_stream_session_t *s, ngx_str_t str)
     ngx_int_t            rc;
     ngx_chain_t         *out;
     ngx_connection_t    *c;
+    ngx_stream_gts_ctx_t*ctx;
     
     c = s->connection;
+    
+    ctx = ngx_stream_get_module_ctx(s, ngx_stream_gts_module);
     
     out = ngx_chain_get_free_buf(c->pool, NULL);
     if (out == NULL) {
@@ -179,9 +193,8 @@ ngx_stream_gts_write_buffer(ngx_stream_session_t *s, ngx_str_t str)
     
     out->buf->tag = (ngx_buf_tag_t) &ngx_stream_gts_module;
     
-    //rc = ngx_chain_writer(&ctx->writer, out);
-    
-    
+    rc = ngx_chain_writer(&ctx->writer, out);
+        
     //ngx_chain_update_chains(c->pool, &ctx->free, &ctx->busy, &out,
     //                        (ngx_buf_tag_t) &ngx_stream_echo_module);
     
