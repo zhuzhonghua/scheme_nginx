@@ -8,12 +8,17 @@ typedef struct {
 	ngx_str_t  cfg;
 } ngx_stream_gts_srv_conf_t;
 
+typedef struct{
+    ngx_chain_writer_ctx_t  writer;
+} ngx_stream_gts_ctx_t;
+
 static void *ngx_stream_gts_create_srv_conf(ngx_conf_t *cf);
 static char *ngx_stream_gts_merge_srv_conf(ngx_conf_t *cf, void *parent, void *child);
 static char *ngx_stream_gts_on(ngx_conf_t *cf, ngx_command_t *cmd, void *conf);
 static void ngx_stream_gts_init_session(ngx_stream_session_t *s);
 static void ngx_stream_gts_read_handler(ngx_event_t *rev);
 static void ngx_stream_gts_write_handler(ngx_event_t *rev);
+static ngx_stream_gts_ctx_t *ngx_stream_gts_create_ctx(ngx_stream_session_t *s);
 
 static ngx_command_t  ngx_stream_gts_commands[] = {	
 	{
@@ -182,4 +187,23 @@ ngx_stream_gts_write_buffer(ngx_stream_session_t *s, ngx_str_t str)
     
     return rc;
 
+}
+
+static ngx_stream_gts_ctx_t *ngx_stream_gts_create_ctx(ngx_stream_session_t *s)
+{
+    ngx_connection_t            *c;
+    ngx_stream_gts_ctx_t       *ctx;
+    
+    c = s->connection;
+    
+    ctx = ngx_pcalloc(c->pool, sizeof(ngx_stream_gts_ctx_t));
+    if (ctx == NULL) {
+        return NULL;
+    }
+    
+    ctx->writer.pool = c->pool;
+    ctx->writer.last = &ctx->writer.out;
+    ctx->writer.connection = c;
+    
+    return ctx;
 }
