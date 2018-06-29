@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../gts/ngx_stream_echo_module.c"
-            timestampString = "550575601.593212"
+            timestampString = "551939100.008675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1645"
             endingLineNumber = "1645"
-            landmarkName = "ngx_stream_echo_echo()"
-            landmarkType = "7">
+            landmarkName = "ngx_stream_echo_echo"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../gts/ngx_stream_echo_module.c"
-            timestampString = "550575695.81259"
+            timestampString = "551939100.008726"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1238"
             endingLineNumber = "1238"
-            landmarkName = "ngx_stream_echo_writer()"
-            landmarkType = "7">
+            landmarkName = "ngx_stream_echo_writer"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,13 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../gts/ngx_stream_echo_module.c"
-            timestampString = "550575715.901845"
+            timestampString = "551939100.008763"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1353"
             endingLineNumber = "1353"
-            landmarkName = "ngx_stream_echo_block_reading()"
-            landmarkType = "7">
+            landmarkName = "ngx_stream_echo_block_reading"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -63,22 +63,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "201"
             endingLineNumber = "201"
-            landmarkName = "ngx_stream_init_connection"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../src/stream/ngx_stream_handler.c"
-            timestampString = "550777628.681985"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
             landmarkName = "ngx_stream_init_connection"
             landmarkType = "9">
          </BreakpointContent>

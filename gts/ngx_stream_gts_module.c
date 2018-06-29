@@ -9,7 +9,9 @@ typedef struct {
 } ngx_stream_gts_srv_conf_t;
 
 typedef struct{
-    ngx_chain_writer_ctx_t  writer;
+	ngx_chain_t             *busy;
+	ngx_chain_t							*free;
+  ngx_chain_writer_ctx_t  writer;
 } ngx_stream_gts_ctx_t;
 
 static void *ngx_stream_gts_create_srv_conf(ngx_conf_t *cf);
@@ -19,6 +21,7 @@ static void ngx_stream_gts_init_session(ngx_stream_session_t *s);
 static void ngx_stream_gts_read_handler(ngx_event_t *rev);
 static void ngx_stream_gts_write_handler(ngx_event_t *rev);
 static ngx_stream_gts_ctx_t *ngx_stream_gts_create_ctx(ngx_stream_session_t *s);
+static ngx_int_t ngx_stream_gts_write_buffer(ngx_stream_session_t *s, ngx_str_t str);
 
 static ngx_command_t  ngx_stream_gts_commands[] = {	
 	{
@@ -155,11 +158,15 @@ static void ngx_stream_gts_read_handler(ngx_event_t *rev)
 	int n = c->recv(c, c->buffer->last, size);
 	
 	printf("read handler %d recv %d\n", size, n);
-    
+	
+	ngx_str_t buf;
+	buf.len = n+1;
+	buf.data = ngx_pcalloc(c->pool, n+1);
+	ngx_copy(buf.data, c->buffer->last, n);
     //do the echo service
     // ngx_copy the buffer
-    //rc = ngx_stream_gts_write_buffer(s, );
-    printf("write buffer %d\n", rc);
+  rc = ngx_stream_gts_write_buffer(s, buf);
+  printf("write buffer %d\n", rc);
 }
 
 
@@ -181,7 +188,7 @@ ngx_stream_gts_write_buffer(ngx_stream_session_t *s, ngx_str_t str)
     
     ctx = ngx_stream_get_module_ctx(s, ngx_stream_gts_module);
     
-    out = ngx_chain_get_free_buf(c->pool, NULL);
+    out = ngx_chain_get_free_buf(c->pool, &ctx->free);
     if (out == NULL) {
         return NGX_ERROR;
     }
@@ -195,11 +202,10 @@ ngx_stream_gts_write_buffer(ngx_stream_session_t *s, ngx_str_t str)
     
     rc = ngx_chain_writer(&ctx->writer, out);
         
-    //ngx_chain_update_chains(c->pool, &ctx->free, &ctx->busy, &out,
-    //                        (ngx_buf_tag_t) &ngx_stream_echo_module);
+    ngx_chain_update_chains(c->pool, &ctx->free, &ctx->busy, &out,
+                            (ngx_buf_tag_t) &ngx_stream_gts_module);
     
     return rc;
-
 }
 
 static ngx_stream_gts_ctx_t *ngx_stream_gts_create_ctx(ngx_stream_session_t *s)
