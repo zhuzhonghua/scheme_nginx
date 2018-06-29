@@ -144,7 +144,7 @@ ngx_stream_gts_init_session(ngx_stream_session_t *s)
 
 static void ngx_stream_gts_read_handler(ngx_event_t *rev)
 {
-    ngx_int_t rc;
+	ngx_int_t rc;
     
 	ngx_connection_t* c = rev->data;
 	ngx_stream_core_srv_conf_t  *cscf;
@@ -166,10 +166,9 @@ static void ngx_stream_gts_read_handler(ngx_event_t *rev)
 	}
 	ngx_str_t buf;
 	buf.len = n+1;
-	buf.data = ngx_pcalloc(c->pool, n+1);
-	ngx_copy(buf.data, c->buffer->last, n);
-    //do the echo service
-    // ngx_copy the buffer
+	buf.data = c->buffer->last;
+	//do the echo service
+	// ngx_copy the buffer
   rc = ngx_stream_gts_write_buffer(s, buf);
   printf("write buffer %d\n", rc);
 }
