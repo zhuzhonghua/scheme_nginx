@@ -158,7 +158,12 @@ static void ngx_stream_gts_read_handler(ngx_event_t *rev)
 	int n = c->recv(c, c->buffer->last, size);
 	
 	printf("read handler %d recv %d\n", size, n);
-	
+
+	if(n <= 0){
+		printf("read error \n");
+		ngx_close_connection(c);
+		return;
+	}
 	ngx_str_t buf;
 	buf.len = n+1;
 	buf.data = ngx_pcalloc(c->pool, n+1);
