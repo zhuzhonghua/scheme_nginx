@@ -1,3 +1,12 @@
 ngx_addon_name=ngx_stream_scheme_module
+CORE_INCS="$CORE_INCS $ngx_addon_dir/../chibi-scheme/include"
 STREAM_MODULES="$STREAM_MODULES ngx_stream_scheme_module"
 NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ngx_stream_scheme_module.c"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/../chibi-scheme/bignum.c \
+																$ngx_addon_dir/../chibi-scheme/eval.c \
+																$ngx_addon_dir/../chibi-scheme/gc_heap.c \
+																$ngx_addon_dir/../chibi-scheme/gc.c \
+																$ngx_addon_dir/../chibi-scheme/opcodes.c \
+																$ngx_addon_dir/../chibi-scheme/sexp.c \
+																$ngx_addon_dir/../chibi-scheme/vm.c \
+																$ngx_addon_dir/../chibi-scheme/simplify.c"
